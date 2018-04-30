@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+SC');
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -15px;
+  text-decoration: none;
+  max-width: 100%;
+  height: auto;
+  min-height: 100%;
+
+}
+
+.Menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: linear-gradient(to bottom right, #ff8c1a, #ffa64d);
+  min-height: 101.6vh;
+  min-width: 20vh;
+  border-radius: 5px;
+  margin: 0px;
+  background-image: url("https://www.thesun.co.uk/wp-content/uploads/2017/07/nintchdbpict0003370532861.jpg?strip=all&w=960");
+  background-position: 77% 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+}
+
+.Menu * {
+  height: 80px;
+  width: 70%;
+  list-style-type: none;
+  text-decoration: none;
+  color: #800000;
+  font-family: 'Alegreya SC', serif;
+  font-size: 2em;
+}
+
+button * {
+  padding-top: 25px;
+}
+
+button {
+  border: none;
+  outline: none;
+  background: transparent;
+  -moz-outline-style: none;
+}
+button:focus {
+   background-color: SteelBlue;
+   color: White;
+   border: none;
+   outline: none;
+   text-decoration: none;
+ }
+
+li:focus li:active {
+   background-color: SteelBlue;
+   color: White;
+   border: none;
+   outline: none;
+   text-decoration: none;
+}
+
+li:active{
+  color: black;
+}
+
+/*
+I noticed that the following line will change things across components..
+Interesting.... The globalness of CSS is still with us. even when buying into
+components. */
+li {
+  font: 20 Helvetica;
+}
+
+
+
+/* I was having the routes onClick give a dotted
+border that was a problem only on firefox..
+Here is the way I found to fix it.
+https://stackoverflow.com/questions/71074/how-to-remove-firefoxs-dotted-outline-on-buttons-as-well-as-links */
+:focus {outline:none;}
+::-moz-focus-inner {border: 0;}
